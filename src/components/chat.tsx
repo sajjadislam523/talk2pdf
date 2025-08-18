@@ -25,16 +25,15 @@ export function Chat() {
     // Send Message to AI Model (Replace with your API)
     const fetchAIResponse = async (userMessage: string) => {
         try {
-            const prompt = pdfText
-                ? `Based on the following PDF content:\n\n${pdfText}\n\nAnswer the following question:\n${userMessage}`
-                : userMessage;
-
             const response = await fetch("/api/chat", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({ message: prompt }),
+                body: JSON.stringify({
+                    message: userMessage,
+                    pdfText: pdfText,
+                }),
             });
 
             if (!response.ok) throw new Error("Failed to get AI response");

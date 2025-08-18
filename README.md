@@ -76,16 +76,13 @@ https://talk2pdf-ten.vercel.app/
 
 -   **Next.js**: Server-side rendering, fast page loads, SEO optimization
 -   **TypeScript**: Enhanced code quality and type safety
--   **Redux**: State management for real-time features
+-   **React Context**: State management for real-time features
 -   **Tailwind CSS**: Modern, responsive UI design
 
 ### Backend & Infrastructure
 
--   **AWS Services**
-    -   S3 for secure file storage
-    -   Lambda for serverless computing
-    -   Global data center infrastructure
--   **OpenAI API**: Advanced language processing
+-   **Supabase**: Used for secure file storage.
+-   **OpenRouter API**: For accessing various large language models.
 -   **PDF.js**: PDF document handling
 
 ## 🎯 Target Sectors & Use Cases
@@ -125,7 +122,8 @@ https://talk2pdf-ten.vercel.app/
 
 -   Node.js (v14 or higher)
 -   npm or yarn
--   OpenAI API key
+-   OpenRouter API key
+-   Supabase project URL and anon key
 
 ### Installation
 
@@ -148,9 +146,9 @@ yarn install
    Create a `.env.local` file:
 
 ```
-OPENAI_API_KEY=your_api_key_here
-AWS_ACCESS_KEY=your_aws_key
-AWS_SECRET_KEY=your_aws_secret
+OPENROUTER_API_KEY=your_openrouter_api_key
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
 
 4. Start the development server
@@ -177,6 +175,6 @@ For support, please create an issue in the repository or contact our support tea
 
 ## 🌟 Acknowledgments
 
--   OpenAI for AI capabilities
--   AWS for infrastructure support
+-   OpenRouter for AI capabilities
+-   Supabase for infrastructure support
 -   Our amazing contributors and users
